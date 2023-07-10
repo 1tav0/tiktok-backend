@@ -62,5 +62,14 @@ app.get('/v2/posts', (req, res) => {
                 res.status(500).send(error);
             })
 })
+app.get('/v2/posts', (req, res) => {
+    Videos.find()
+            .then( data => {
+                res.status(200).send(data);
+            })
+            .catch(error => {
+                res.status(500).send(error);
+            })
+})
 //5:14
 //deployment to heroku notes
